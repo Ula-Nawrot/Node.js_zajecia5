@@ -1,5 +1,5 @@
 const express = require("express"); //nie korzystam już z http!!
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 const path = require('path')
 const fromAnotherFile = require("./functions");
