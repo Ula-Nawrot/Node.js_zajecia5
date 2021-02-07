@@ -1,7 +1,7 @@
 //alert("Hello world");
 
 const example = () => {
-    const fromInput = document.getElementById('example').nodeValue;
+    const fromInput = document.getElementById('example').value;
     document.getElementById('text').innerText = fromInput;
 }
 
