@@ -1,6 +1,13 @@
-const functions = require("./functions")
+const http = require('http');
+const handler = (request, response) => {
+    console.log('sample message');
+    response.end("Hello World");
 
-console.log('Hello world');
+}
+const server = http.createServer(handler);
+const port = 3000;
 
-functions.helloWorld();
-functions.add(4,5)
+server.listen(port, (err) => {
+    if(err){return console.log('coś poszło nie tak..:', err);}
+    console.log(`serwer działa na porcie ${port}`);
+})
